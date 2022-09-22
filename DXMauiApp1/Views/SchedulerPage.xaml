@@ -9,23 +9,20 @@
              ios:Page.UseSafeArea="true"
              x:Class="DXMauiApp1.Views.SchedulerPage">
     <ContentPage.Content>
-        <dxsch:DayView x:Name="dayView">
-            <dxsch:DayView.DataStorage>
-                <dxsch:SchedulerDataStorage>
-                    <dxsch:SchedulerDataStorage.DataSource>
-                        <dxsch:DataSource AppointmentsSource="{Binding Items}">
-                            <dxsch:DataSource.AppointmentMappings>
-                                <dxsch:AppointmentMappings 
-                                    Id="Id" 
-                                    Start="StartTime" 
-                                    End="EndTime" 
-                                    Subject="Text"
-                                    />      
-                            </dxsch:DataSource.AppointmentMappings>
-                        </dxsch:DataSource>
-                    </dxsch:SchedulerDataStorage.DataSource>
+        <dxsch:WorkWeekView Start="{Binding StartDate}"
+                    FirstDayOfWeek="Monday"
+                    WorkDays="Monday,Tuesday,Wednesday,Friday" 
+                    WorkTime="7:00:00-19:00:00"
+                    ShowWorkTimeOnly="True"
+                    TimeScaleInterval="01:00:00"
+                    TimeScaleSlotCount="4"
+                    SnapToCellsMode="Never"
+                    Tap="WorkWeekView_Tap">
+            <dxsch:WorkWeekView.DataStorage>
+                <dxsch:SchedulerDataStorage x:Name="storage">
+                    <!-- ... -->
                 </dxsch:SchedulerDataStorage>
-            </dxsch:DayView.DataStorage>
-        </dxsch:DayView>
+            </dxsch:WorkWeekView.DataStorage>
+        </dxsch:WorkWeekView>
     </ContentPage.Content>
 </ContentPage>
