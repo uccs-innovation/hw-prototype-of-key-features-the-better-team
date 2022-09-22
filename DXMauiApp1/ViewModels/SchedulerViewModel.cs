@@ -7,7 +7,7 @@ namespace DXMauiApp1.ViewModels
     {
         public SchedulerViewModel()
         {
-            Title = "Scheduler";
+            Title = "Calendar";
             Items = new ObservableCollection<Item>();
 
         }
