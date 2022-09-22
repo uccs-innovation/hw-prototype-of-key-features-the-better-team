@@ -5,6 +5,7 @@ namespace DXMauiApp1.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PopupPage : ContentPage
     {
+        public bool isStudying = false;
         public PopupPage()
         {
             InitializeComponent();
@@ -13,7 +14,24 @@ namespace DXMauiApp1.Views
 
         void OnButtonClicked(object sender, EventArgs e)
         {
-            Popup.IsOpen = true;
+            if (isStudying == false)
+            {
+                isStudying = true;
+                StartStudy.IsOpen = true;
+                Task.Delay(new TimeSpan(0, 0, 3)).ContinueWith(o => { Notify(); });
+            }
+
+            else
+            {
+                isStudying = false;
+                StopStudy.IsOpen = true;
+            }
+        }
+
+        void Notify()
+        {
+            StartStudy.IsOpen = false;
+            NotifyPopup.IsOpen = true;
         }
     }
 }

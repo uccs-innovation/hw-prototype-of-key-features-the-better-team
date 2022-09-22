@@ -11,14 +11,28 @@
     <ContentPage.Content>
         <Grid>
             <Button VerticalOptions="Center"
-                    Margin="25,0,25,20"
-                    Text="Show Popup"
+                    HorizontalOptions="Center"
+                    Margin="40,0,40,0"
+                    Text="Start/Stop Studying"
                     Style="{StaticResource PrimaryButton}"
                     Clicked="OnButtonClicked"/>
-            <dxco:DXPopup x:Name="Popup">
+            <dxco:DXPopup x:Name="StartStudy">
                 <StackLayout WidthRequest="200" BackgroundColor="AliceBlue">
-                    <Label Text="This is the DevExpress Popup component for .NET MAUI.
-                                &#10;Tap outside the popup to hide it."
+                    <Label Text="Started study session!"
+                        TextColor="{StaticResource NormalText}"
+                        Margin="5, 5"/>
+                </StackLayout>
+            </dxco:DXPopup>
+            <dxco:DXPopup x:Name="StopStudy">
+                <StackLayout WidthRequest="200" BackgroundColor="AliceBlue">
+                    <Label Text="Finished study session!"
+                        TextColor="{StaticResource NormalText}"
+                        Margin="5, 5"/>
+                </StackLayout>
+            </dxco:DXPopup>
+            <dxco:DXPopup x:Name="NotifyPopup">
+                <StackLayout WidthRequest="200" BackgroundColor="AliceBlue">
+                    <Label Text="You've been studying for a while, why not take a break?"
                         TextColor="{StaticResource NormalText}"
                         Margin="5, 5"/>
                 </StackLayout>

@@ -11,20 +11,20 @@
         <Tab Title="About" Icon="info">
             <ShellContent ContentTemplate="{DataTemplate local:AboutPage}" Route="DXMauiApp1.Views.AboutPage"  />
         </Tab>
-        <Tab Title ="Browse" Icon="browse">
-            <ShellContent ContentTemplate="{DataTemplate local:ItemsPage}" />
-        </Tab>
         <Tab Title="Scheduler" Icon="scheduler">
             <ShellContent ContentTemplate="{DataTemplate local:SchedulerPage}" />
         </Tab>
         <Tab Title="DataGrid" Icon="grid">
             <ShellContent ContentTemplate="{DataTemplate local:DataGridPage}"/>
         </Tab>
+        <Tab Title="Notifications" Icon="popup">
+            <ShellContent ContentTemplate="{DataTemplate local:PopupPage}" />
+        </Tab>
         <Tab Title="Charts" Icon="charts">
             <ShellContent ContentTemplate="{DataTemplate local:ChartsPage}" />
         </Tab>
-        <Tab Title="Popup" Icon="popup">
-            <ShellContent ContentTemplate="{DataTemplate local:PopupPage}" />
+        <Tab Title ="Browse" Icon="browse">
+            <ShellContent ContentTemplate="{DataTemplate local:ItemsPage}" />
         </Tab>
     </TabBar>
     <TabBar>
