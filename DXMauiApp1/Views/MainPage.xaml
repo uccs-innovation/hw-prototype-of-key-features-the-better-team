@@ -14,7 +14,7 @@
         <Tab Title="Calendar" Icon="scheduler">
             <ShellContent ContentTemplate="{DataTemplate local:SchedulerPage}" />
         </Tab>
-        <Tab Title="DataGrid" Icon="grid">
+        <Tab Title="Assignements" Icon="grid">
             <ShellContent ContentTemplate="{DataTemplate local:DataGridPage}"/>
         </Tab>
         <Tab Title="Notifications" Icon="popup">
