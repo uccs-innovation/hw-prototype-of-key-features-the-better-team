@@ -11,7 +11,7 @@
         <Tab Title="About" Icon="info">
             <ShellContent ContentTemplate="{DataTemplate local:AboutPage}" Route="DXMauiApp1.Views.AboutPage"  />
         </Tab>
-        <Tab Title="Scheduler" Icon="scheduler">
+        <Tab Title="Calendar" Icon="scheduler">
             <ShellContent ContentTemplate="{DataTemplate local:SchedulerPage}" />
         </Tab>
         <Tab Title="DataGrid" Icon="grid">
