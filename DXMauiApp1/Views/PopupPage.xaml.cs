@@ -18,7 +18,9 @@ namespace DXMauiApp1.Views
             {
                 isStudying = true;
                 StartStudy.IsOpen = true;
-                Task.Delay(new TimeSpan(0, 0, 3)).ContinueWith(o => { Notify(); });
+                Thread.Sleep(TimeSpan.FromSeconds(3));
+                Notify();
+                //Task.Delay(new TimeSpan(0, 0, 3)).ContinueWith(o => { Notify(); });
             }
 
             else
